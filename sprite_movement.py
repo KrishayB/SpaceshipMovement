@@ -2,8 +2,6 @@
 
 import turtle
 import math
-import random
-import os
 
 SCREEN_WIDTH = 800
 SCREEN_HEIGTH = 600
