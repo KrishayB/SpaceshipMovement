@@ -226,7 +226,7 @@ wn.onkeyrelease(player.decelerate, "Up")
 wn.onkeypress(pause_game, "p")
 
 
-# Main run loop.
+# Main run loop for this project.
 while True:
 
     if not is_paused:
