@@ -1,3 +1,5 @@
+https://img.shields.io/badge/Build-passing-brightgreen
+
 # Sprite-Movement-Test
 A test for character movement using the Turtle module in Python.
 
