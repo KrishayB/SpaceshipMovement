@@ -1,5 +1,5 @@
 # Sprite-Movement-Test
-A test for character movement using the Turtle module in Python.
+A test for sprite movement (it's more of a spaceship) using the Turtle module in Python.
 
 ## Controls
 **Forward:** - Use the up arrow key to move forward.  <br />
