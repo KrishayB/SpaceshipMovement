@@ -1,5 +1,3 @@
-# Test for character movement using various classes.
-
 import turtle
 import math
 
@@ -19,7 +17,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 
-# Pause function.
+# Pause function
 is_paused = False
 def pause_game():
     global is_paused
@@ -28,7 +26,7 @@ def pause_game():
     else:
         is_paused = True
 
-# Game class.
+# Game class
 class Game():
     def __init__(self, width, height):
         self.width = width
@@ -59,7 +57,7 @@ class Game():
         pen.penup()
 
 
-# Sprite class.
+# Sprite class
 class Sprite():
     def __init__(self, x, y, shape, color):
         self.x = x
@@ -136,7 +134,7 @@ class Sprite():
 
         pen.penup()
 
-# Player class.
+# Player class
 class Player(Sprite):
     def __init__(self, x, y, shape, color):
         Sprite.__init__(self, 0, 0, shape, color)
@@ -200,19 +198,19 @@ class Camera():
         self.x = x
         self.y = y
 
-# Creates the player sprite.
+# Creates the player sprite
 game = Game(700, 500)
 player = Player(0, 0, "triangle", "white")
 camera = Camera(player.x, player.y)
 
-# Sprites list.
+# Sprites list
 sprites = []
 
-# Sets up the level.
+# Sets up the level
 game.start_level()
 
 
-# Keyboard bindings.
+# Keyboard bindings
 wn.listen()
 wn.onkeypress(player.rotate_left, "Left")
 wn.onkeypress(player.rotate_right, "Right")
@@ -226,17 +224,17 @@ wn.onkeyrelease(player.decelerate, "Up")
 wn.onkeypress(pause_game, "p")
 
 
-# Main run loop for this project.
+# Main loop
 while True:
 
     if not is_paused:
         pen.clear()
 
-        # Updates all the sprites (There's only one here).
+        # Updates all the sprites
         for sprite in sprites:
             sprite.update()
 
-        # Renders all the sprites (There's only one in this case).
+        # Renders all the sprites
         for sprite in sprites:
             sprite.render(pen, camera.x, camera.y)
 
@@ -249,5 +247,3 @@ while True:
         wn.update()
     else:
         wn.update()
-
-# Help from tutorials and other places was used to make this.
