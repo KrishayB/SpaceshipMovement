@@ -1,11 +1,8 @@
 import turtle
 import math
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGTH = 600
-
 wn = turtle.Screen()
-wn.setup(SCREEN_WIDTH + 220, SCREEN_HEIGTH + 30)
+wn.setup(1020, 630)
 wn.title("Character Movement Test")
 wn.bgcolor("black")
 wn.tracer(0)
@@ -69,12 +66,12 @@ class Sprite():
         self.heading = 0
         self.da = 0
         self.thrust = 0.0
-        self.acceleration = 0.2
+        self.acceleration = 0.002
         self.width = 20
         self.height = 20
         self.state = "active"
-        self.max_dx = 5
-        self.max_dy = 5
+        self.max_dx = 0.5
+        self.max_dy = 0.5
 
     def is_collision(self, other):
         if self.x < other.x + other.width and\
@@ -144,10 +141,10 @@ class Player(Sprite):
         self.da = 0
 
     def rotate_left(self):
-        self.da = 5
+        self.da = 0.9
 
     def rotate_right(self):
-        self.da = -5
+        self.da = -0.9
 
     def stop_rotation(self):
         self.da = 0
