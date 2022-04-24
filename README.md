@@ -1,9 +1,9 @@
 # SpaceshipMovement
 
-# About:
+### About:
 - This program moves a spaceship around with Python turtle graphics.
 
-## Controls:
+### Controls:
 - **Forward** - up arrow
 - **Turning Right** - right arrow
 - **Turning Left** - left arrow
